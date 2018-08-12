@@ -16,9 +16,15 @@ ul
 }
 
 nav
-{
+{	
+	padding-top: 20px;
 	height: 50px;
 	background:transparent;
+}
+
+nav ul .active
+{
+	border-bottom: 2px solid #fff;
 }
 
 #banner
@@ -27,27 +33,34 @@ nav
 	background:transparent;
 }
 
+.article #banner
+{
+	height: 300px;
+}
+
 nav ul
 {
 	list-style: none;
 	margin: 0;
 	float: right;
+	padding-right: 20px;
 }
 
 nav ul li, nav .logo
 {
 	display: inline-block;
-	line-height: 50px;
+	line-height: 45px;
 	margin-right: 20px;
 }
 
 nav ul li a
 {
-	line-height: 50px;
+	line-height: 45px;
 	text-decoration: none;
 	display: inline-block;
 	height: inherit;
 	color: #fff;
+	font-size: 14px;
 }
 
 nav .logo
@@ -63,6 +76,11 @@ nav .logo
 	margin: 0 auto;
 	position: relative;
 	top: 150px;
+}
+
+.article #banner .inner
+{
+	top:30px;
 }
 
 #banner .inner h1
@@ -85,7 +103,7 @@ button:hover {
 
 #banner .inner .more
 {
-	margin-top:160px;
+	margin-top:120px;
 	color: #fff
 }
 
@@ -164,10 +182,15 @@ button:hover {
 
 h1
 {
-	padding: 12px;
+	padding: 35px;
 	border-top: 2px solid #fff;
 	border-bottom: 2px solid #fff;
 	color: #fff;
+}
+
+.article h1
+{
+	border: none;
 }
 
 h2{
@@ -215,7 +238,7 @@ h3
 	clear: both;
 }
 
-.article:nth-child(odd)
+.article:nth-child(odd)   //奇偶选择器
 {
 	background-color: rgba(14, 13, 20, 0.05);
 }
@@ -280,7 +303,7 @@ h3
   	letter-spacing: 1px;
   }
 
-  .card:first-child
+  .card:first-child    //透明度逐渐变化
   {
   	background-color: rgba(0, 0, 0, 0.05);
   }
@@ -318,6 +341,11 @@ h3
   	text-align: center;
   }
 
+   .article footer
+  {	
+  	padding:60px 0;
+  }
+
   ul.share-group
   {
   	display: block;
@@ -340,3 +368,75 @@ h3
   	background-size: cover;
   	background-position: center center; 
   }
+
+.mask
+{
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background:rgba(0,0,0,0.3);
+}
+
+#sidebar
+{
+	position: fixed;
+	width: 275px;
+	top: 0;
+	right: -275px;
+	bottom: 0;
+	background:#333;
+	padding: 20px 0;
+	transition: right 0.5s;
+}
+
+#sidebar ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#sidebar ul a
+{
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	padding: 15px 45px;
+	width: 100%
+}
+
+#sidebar ul a:hover
+{
+	background:#444; 
+}
+
+.article .article_wrapper
+{
+	padding: 20px 8%;
+    background-color: #f8f7f8;
+	margin: 0 auto;
+	width: 1080px;
+}
+
+.article .content
+{
+	background: #fefefe;
+	font-size: 13px;
+	margin-bottom: 50px;
+}
+
+article
+{
+	line-height: 2;
+	padding: 30px 0;
+	text-align: center;
+}
+
+.article_info
+{
+	font-size: 13px;
+    color: #a8a8a8;
+}
